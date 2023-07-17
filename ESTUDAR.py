@@ -1,44 +1,100 @@
+def espaço():
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+        print()
+
+
 import random
 from time import sleep
 def linha():
     print("  |-------------------|")
 
-def jogo():
-    print(a)
-    linha()
-    print(b)
-    linha()
-    print(c)
-    linha()
-    print(d)
-    linha()
-    print(e)
+
 
 def jogolimpo():
-    print(a.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
     linha()
-    print(b.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
+    print(a1.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
     linha()
-    print(c.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
+    print(b1.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
     linha()
-    print(d.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
+    print(c1.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
     linha()
-    print(e.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
+    print(d1.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
+    linha()
+    print(e1.replace("1"," ").replace("2"," ").replace("3"," ").replace("4"," ").replace("5"," ").replace("6"," ").replace("7"," ").replace("8"," ").replace("9"," ").replace("0"," "))
+    linha()
 
-
-
-#arrumar a troca de variavel
 
 
         
 
 
 
-a = "A |1|2|3|4|5|6|7|8|9|0|"
-b = "B |1|2|3|4|5|6|7|8|9|0|"
-c = "C |1|2|3|4|5|6|7|8|9|0|"
-d = "D |1|2|3|4|5|6|7|8|9|0|"
-e = "E |1|2|3|4|5|6|7|8|9|0|"
+a = "  |1|2|3|4|5|6|7|8|9|0|"
+b = "  |1|2|3|4|5|6|7|8|9|0|"
+c = "  |1|2|3|4|5|6|7|8|9|0|"
+d = "  |1|2|3|4|5|6|7|8|9|0|"
+e = "  |1|2|3|4|5|6|7|8|9|0|"
+
+
+
+startlinha_estrela = random.randrange(1,6)
+startcoluna_estrela = str(random.randrange(0,10))
+startlinha_personagem = random.randrange(1,6)
+startcoluna_personagem = str(random.randrange(0,10))
+
+while startlinha_estrela == startlinha_personagem:
+        startlinha_estrela = random.randrange(1,6)
+while startcoluna_estrela == startcoluna_personagem:
+        startcoluna_estrela = str(random.randrange(0,10))
+
+#spawn aleatório
+
+if startlinha_estrela == 1:
+        a = a.replace(startcoluna_estrela, "*")
+elif startlinha_estrela == 2:
+        b = b.replace(startcoluna_estrela, "*")
+elif startlinha_estrela == 3:
+        c = c.replace(startcoluna_estrela, "*")
+elif startlinha_estrela == 4:
+        d = d.replace(startcoluna_estrela, "*")
+elif startlinha_estrela == 5:
+        e = e.replace(startcoluna_estrela, "*")
 
 a1 = a
 b1 = b
@@ -46,138 +102,110 @@ c1 = c
 d1 = d
 e1 = e
 
-
-startlinha_estrela = 1
-startcoluna_estrela = "5"
-startlinha_personagem = 5
-startcoluna_personagem = "1"
-
-random.randrange(1,6)
-str(random.randrange(0,10))
-
-while startlinha_estrela == startlinha_personagem:
-        startlinha_estrela = random.randrange(1,6)
-
-print("linha estrela: ",startlinha_estrela)
-print("coluna estrela: ",startcoluna_estrela)
-print()
-print("linha personagem: ",startlinha_personagem)
-print("coluna personagem: ",startcoluna_personagem)
-
-#estrela
-if startlinha_estrela == 1:
-        a = a.replace(startcoluna_estrela, "*")
-
-
-elif startlinha_estrela == 2:
-        b = b.replace(startcoluna_estrela, "*")
-
-
-elif startlinha_estrela == 3:
-        c = c.replace(startcoluna_estrela, "*")
-
-
-elif startlinha_estrela == 4:
-        d = d.replace(startcoluna_estrela, "*")
-
-
-elif startlinha_estrela == 5:
-        e = e.replace(startcoluna_estrela, "*")
-
-#personagem
+#spawn personagem
 if startlinha_personagem == 1:
-        a = a.replace(startcoluna_personagem, "£")
-
-
+        a1 = a.replace(startcoluna_personagem, "£")
 elif startlinha_personagem == 2:
-        b = b.replace(startcoluna_personagem, "£")
-
-
+        b1 = b.replace(startcoluna_personagem, "£")
 elif startlinha_personagem == 3:
-        c = c.replace(startcoluna_personagem, "£")
-
-
+        c1 = c.replace(startcoluna_personagem, "£")
 elif startlinha_personagem == 4:
-        d = d.replace(startcoluna_personagem, "£")
-
-
+        d1 = d.replace(startcoluna_personagem, "£")
 elif startlinha_personagem == 5:
-        e = e.replace(startcoluna_personagem, "£")
-#tentar colocar o de cima em for
+        e1 = e.replace(startcoluna_personagem, "£")
 
+print("Pegue a estrela (*) com seu personagem (£)")
 
-jogo()
+jogolimpo()
 
+#andar
 while True:
+        if startcoluna_estrela == startcoluna_personagem and startlinha_estrela == startlinha_personagem:
+                a1 = a.replace("*","£")
+                b1 = b.replace("*","£")
+                c1 = c.replace("*","£")
+                d1 = d.replace("*","£")
+                e1 = e.replace("*","£")
+                espaço()
+                jogolimpo()
+                print()
+                linha()
+                print("  Você pegou a estrela!")
+                linha()
+                break
+        
         comando  = input("Digite a direção que o personagem irá de se mover: ")
         if comando == "cima" or comando == "Cima":
                 cima = int(input(('Quantos passos para cima? ')))
                 for andar in range(0,cima):
                         startlinha_personagem = startlinha_personagem - 1
                         if startlinha_personagem == 4:
-                                d = d.replace(startcoluna_personagem, "£")
-                        
+                                d1 = d.replace(startcoluna_personagem, "£")
+                                e1 = e.replace("£",startcoluna_personagem )
                         elif startlinha_personagem == 3:
-                                c = c.replace(startcoluna_personagem, "£")
-                                
+                                c1 = c.replace(startcoluna_personagem, "£")  
+                                d1 = d.replace("£",startcoluna_personagem ) 
                         elif startlinha_personagem == 2:
-                                b = b.replace(startcoluna_personagem, "£")
-
+                                b1 = b.replace(startcoluna_personagem, "£")
+                                c1 = c.replace("£",startcoluna_personagem )
                         elif startlinha_personagem == 1:
-                                a = a.replace(startcoluna_personagem, "£")
-                
-                
-                        
-                        
-                        
+                                a1 = a.replace(startcoluna_personagem, "£")
+                                b1 = b.replace("£",startcoluna_personagem )
+                        sleep(1)
+                        espaço()
+                        jogolimpo()
 
+                
         elif comando == 'baixo' or comando == 'Baixo':
                 baixo = int(input(('Quantos passos para baixo? ')))
                 for andar in range(0,baixo):
                         startlinha_personagem = startlinha_personagem + 1
                         if startlinha_personagem == 1:
-                                a = a.replace(startcoluna_personagem, "£")
-                                
+                                a1 = a.replace(startcoluna_personagem, "£")                               
                         elif startlinha_personagem == 2:
-                                b = b.replace(startcoluna_personagem, "£")
-                                
+                                b1 = b.replace(startcoluna_personagem, "£")
+                                a1 = a.replace("£",startcoluna_personagem)
                         elif startlinha_personagem == 3:
-                                c = c.replace(startcoluna_personagem, "£")
-                                
+                                c1 = c.replace(startcoluna_personagem, "£")
+                                b1 = b.replace("£",startcoluna_personagem)
                         elif startlinha_personagem == 4:
-                                d = d.replace(startcoluna_personagem, "£")
+                                d1 = d.replace(startcoluna_personagem, "£")
+                                c1 = c.replace("£",startcoluna_personagem)
                         elif startlinha_personagem == 5:
-                                e = e.replace(startcoluna_personagem, "£")
+                                e1 = e.replace(startcoluna_personagem, "£")
+                                d1 = d.replace("£",startcoluna_personagem)
+                        sleep(1)
+                        espaço()
+                        jogolimpo()
                 
-                
-
         elif comando == 'direita' or comando == 'Direita':
                 direita = int(input(('Quantos passos para direita? ')))
                 for andar in range(0,direita):
                         startcoluna_personagem = int(startcoluna_personagem) + 1
                         startcoluna_personagem = str(startcoluna_personagem)
                         if startlinha_personagem == 1:
-                                a = a.replace(startcoluna_personagem,"£")
-                                if int(startcoluna_personagem) > 9:
-                                        a = a.replace("0", "£")
+                                a1 = a.replace(startcoluna_personagem,"£")
+                                if int(startcoluna_personagem) >= 10:
+                                        a1 = a.replace("0", "£")
                         elif startlinha_personagem == 2:
-                                b = b.replace(startcoluna_personagem,"£")
+                                b1 = b.replace(startcoluna_personagem,"£")
                                 if int(startcoluna_personagem) >= 10:
-                                        b = b.replace("0", "£")
+                                        b1 = b.replace("0", "£")
                         elif startlinha_personagem == 3:
-                                c = c.replace(startcoluna_personagem,"£")
+                                c1 = c.replace(startcoluna_personagem,"£")
                                 if int(startcoluna_personagem) >= 10:
-                                        c = c.replace("0", "£")
+                                        c1 = c.replace("0", "£")
                         elif startlinha_personagem == 4:
-                                d = d.replace(startcoluna_personagem,"£")
+                                d1 = d.replace(startcoluna_personagem,"£")
                                 if int(startcoluna_personagem) >= 10:
-                                        d = d.replace("0", "£")
+                                        d1 = d.replace("0", "£")
                         elif startlinha_personagem == 5:
-                                e = e.replace(startcoluna_personagem,"£")
+                                e1 = e.replace(startcoluna_personagem,"£")
                                 if int(startcoluna_personagem) >= 10:
-                                        e = e.replace("0", "£")
-                                
-                
+                                        e1 = e.replace("0", "£")
+                        sleep(1)
+                        espaço()
+                        jogolimpo()
                 
         elif comando == 'esquerda' or comando == 'Esquerda':
                 esquerda = int(input(('Quantos passos para esquerda? ')))
@@ -185,13 +213,21 @@ while True:
                         startcoluna_personagem = int(startcoluna_personagem) - 1
                         startcoluna_personagem = str(startcoluna_personagem)
                         if startlinha_personagem == 1:
-                                a = a.replace(startcoluna_personagem,"£")
+                                a1 = a.replace(startcoluna_personagem,"£")
                         elif startlinha_personagem == 2:
-                                b = b.replace(startcoluna_personagem,"£")
+                                b1 = b.replace(startcoluna_personagem,"£")
                         elif startlinha_personagem == 3:
-                                c = c.replace(startcoluna_personagem,"£")
+                                c1 = c.replace(startcoluna_personagem,"£")
                         elif startlinha_personagem == 4:
-                                d = d.replace(startcoluna_personagem,"£")
+                                d1 = d.replace(startcoluna_personagem,"£")
                         elif startlinha_personagem == 5:
-                                e = e.replace(startcoluna_personagem,"£")
-        jogolimpo()
+                                e1 = e.replace(startcoluna_personagem,"£")
+                        sleep(1)
+                        espaço()
+                        jogolimpo()
+        elif comando in ["fechar", "Fechar", "sair", "Sair"]:
+                break
+        
+
+        
+#arrumar posição se startcoluna_personagem == 0
