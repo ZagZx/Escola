@@ -65,11 +65,11 @@ def jogolimpo():
 
 
 
-a = "  |1|2|3|4|5|6|7|8|9|0|"
-b = "  |1|2|3|4|5|6|7|8|9|0|"
-c = "  |1|2|3|4|5|6|7|8|9|0|"
-d = "  |1|2|3|4|5|6|7|8|9|0|"
-e = "  |1|2|3|4|5|6|7|8|9|0|"
+a = "  |0|1|2|3|4|5|6|7|8|9|"
+b = "  |0|1|2|3|4|5|6|7|8|9|"
+c = "  |0|1|2|3|4|5|6|7|8|9|"
+d = "  |0|1|2|3|4|5|6|7|8|9|"
+e = "  |0|1|2|3|4|5|6|7|8|9|"
 
 
 
@@ -139,6 +139,8 @@ while True:
                 cima = int(input(('Quantos passos para cima? ')))
                 for andar in range(0,cima):
                         startlinha_personagem = startlinha_personagem - 1
+                        if startlinha_personagem < 1:
+                                startlinha_personagem = 1
                         if startlinha_personagem == 4:
                                 d1 = d.replace(startcoluna_personagem, "£")
                                 e1 = e.replace("£",startcoluna_personagem )
@@ -160,8 +162,10 @@ while True:
                 baixo = int(input(('Quantos passos para baixo? ')))
                 for andar in range(0,baixo):
                         startlinha_personagem = startlinha_personagem + 1
+                        if startlinha_personagem > 5:
+                                startlinha_personagem = 5
                         if startlinha_personagem == 1:
-                                a1 = a.replace(startcoluna_personagem, "£")                               
+                                a1 = a.replace(startcoluna_personagem, "£")                          
                         elif startlinha_personagem == 2:
                                 b1 = b.replace(startcoluna_personagem, "£")
                                 a1 = a.replace("£",startcoluna_personagem)
@@ -182,27 +186,22 @@ while True:
                 direita = int(input(('Quantos passos para direita? ')))
                 for andar in range(0,direita):
                         startcoluna_personagem = int(startcoluna_personagem) + 1
+                        if int(startcoluna_personagem) > 9:
+                                startcoluna_personagem = "9"
                         startcoluna_personagem = str(startcoluna_personagem)
                         if startlinha_personagem == 1:
                                 a1 = a.replace(startcoluna_personagem,"£")
-                                if int(startcoluna_personagem) >= 10:
-                                        a1 = a.replace("0", "£")
                         elif startlinha_personagem == 2:
                                 b1 = b.replace(startcoluna_personagem,"£")
-                                if int(startcoluna_personagem) >= 10:
-                                        b1 = b.replace("0", "£")
                         elif startlinha_personagem == 3:
                                 c1 = c.replace(startcoluna_personagem,"£")
-                                if int(startcoluna_personagem) >= 10:
-                                        c1 = c.replace("0", "£")
+                                
                         elif startlinha_personagem == 4:
                                 d1 = d.replace(startcoluna_personagem,"£")
-                                if int(startcoluna_personagem) >= 10:
-                                        d1 = d.replace("0", "£")
+                               
                         elif startlinha_personagem == 5:
                                 e1 = e.replace(startcoluna_personagem,"£")
-                                if int(startcoluna_personagem) >= 10:
-                                        e1 = e.replace("0", "£")
+                                
                         sleep(1)
                         espaço()
                         jogolimpo()
@@ -213,14 +212,24 @@ while True:
                         startcoluna_personagem = int(startcoluna_personagem) - 1
                         startcoluna_personagem = str(startcoluna_personagem)
                         if startlinha_personagem == 1:
+                                if int(startcoluna_personagem) < 0:
+                                        startcoluna_personagem = "0"
                                 a1 = a.replace(startcoluna_personagem,"£")
                         elif startlinha_personagem == 2:
+                                if int(startcoluna_personagem) < 0:
+                                        startcoluna_personagem = "0"
                                 b1 = b.replace(startcoluna_personagem,"£")
                         elif startlinha_personagem == 3:
+                                if int(startcoluna_personagem) < 0:
+                                        startcoluna_personagem = "0"
                                 c1 = c.replace(startcoluna_personagem,"£")
                         elif startlinha_personagem == 4:
+                                if int(startcoluna_personagem) < 0:
+                                        startcoluna_personagem = "0"
                                 d1 = d.replace(startcoluna_personagem,"£")
                         elif startlinha_personagem == 5:
+                                if int(startcoluna_personagem) < 0:
+                                        startcoluna_personagem = "0"
                                 e1 = e.replace(startcoluna_personagem,"£")
                         sleep(1)
                         espaço()
@@ -230,4 +239,3 @@ while True:
         
 
         
-#arrumar posição se startcoluna_personagem == 0
