@@ -1,61 +1,165 @@
-#1. Escrever um algoritmo que lê 5 valores para a, um de cada vez, e conta quantos destes valores são negativos, escrevendo esta informação.
-
-#2. Escrever um algoritmo que lê um valor N inteiro e positivo e que calcula e escreve o valor de E.
-#E = 1 + 1 / 1! + 1 / 2! + 1 / 3! + 1 / N!
-
-#3. A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:
-#a) média do salário da população;
-#b) média do número de filhos;
-#c) maior salário;
-#d) percentual de pessoas com salário até R$100,00.
-
-#47. Uma loja tem 150 clientes cadastrados e deseja mandar uma correspondência a cada um deles anunciando um bônus especial.
-# Escreva um algoritmo que leia o nome do cliente e o valor das suas compras no ano passado e calcule um bônus de 10% se o valor das compras for
-# menor que 500.000 e de15 %, caso contrário.
-
-
 while True:
     print('Digite o número da questão ou "sair" para fechar o programa')
     ativ = input("Comando: ")
     if ativ == "sair" or ativ == "Sair":
         break
 
-    if ativ == "1":
-        negativo1 = 0
-        print("======================================")
-        for a in range(0,5):
-            numero1 = int(input("Digite um número: "))
-            if numero1 < 0:
-                negativo1 += 1
-        if negativo1 == 1:
-            print(negativo1, "número é negativo")
-        else:
-            print (negativo1, "números são negativos")
-        print("======================================")
+    if ativ == '1':
+        vetor = [1, 0, 5, -2, -5, 7]
+        soma = vetor[0] + vetor[1] + vetor[5]
+        print("A soma é:",soma)
+        vetor[4] = 100
+        for a in range(0,6):
+            print(vetor[a])
 
     if ativ == '2':
-        print("======================================")
-        n2 = int(input("Digite um valor para N: "))
-        e2 = 1 + 1 / 1 + 1 / 2 + 1 / 3 + 1 / n2
-        print("E = ",e2)
-        print("======================================")
+        vetor = []
+        for a in range(0,6):
+            vetor.append(int(input("Digite um número: ")))
+        print(vetor)
+    
+    if ativ == '3':
+        numeros = []
+        quadrados = []
+        for a in range(0,10):
+            numeros.append(float(input("Digite um número: ")))
+        
+        for b in range(0,10):
+            quadrados.append(numeros[b] * numeros[b])
+        print(numeros)
+        print(quadrados)
+    if ativ == '4':
+        vetor = []
+        for a in range(0,8):
+            vetor.append(int(input('Digite um número: ')))
+        pos1 = int(input("Digite uma posição do vetor(de 0 a 7): "))
+        pos2 = int(input("Digite outra posição do vetor(de 0 a 7): "))
 
-    if ativ == "47":
-        print("======================================")
-        for a in range(0,150):
-            nome47 = input("Seu nome: ")
-            if nome47 == "sair" or nome47 == "Sair":
-                break
-
-            compras47 = float(input("Valor em compras no ano passado: "))
-            if compras47 < 500000:
-                bonus47 = "10%"
-                bonusdin47 = compras47 * (10/100)
+        soma = vetor[pos1] + vetor[pos2]
+        print(soma)
+    if ativ == '5':
+        vetor = []
+        pares = 0
+        for a in range(0,10):
+            vetor.append(int(input("Digite um número: ")))
+        for b in vetor:
+            if b % 2 == 0:
+                pares += 1
+        print(pares)
+    if ativ == '6':
+        vetor = []
+        for a in range(0,10):
+            vetor.append(int(input("Digite um número: ")))
+        menor = min(vetor)
+        maior = max(vetor)
+        print(menor)       
+        print(maior)
+    if ativ == '7':
+        vetor = []
+        maiorposicao = 0
+        for a in range(0,10):
+            vetor.append(int(input("Digite um número: ")))
+        maior = max(vetor)
+        for b in range(0,10):
+            if vetor[b] == maior:
+                maiorposicao = b
+            
+        print('Vetor:',vetor)
+        print('Maior:',maior)
+        print('Posição:',maiorposicao)
+    if ativ == '8':
+        vetor = []
+        for a in range(0,6):
+            vetor.append(int(input("Digite um número: ")))
+        for b in range(5,-1, -1):
+            aux = vetor[b]
+            vetor.insert(aux)
+            vetor.pop(vetor)
+        print(vetor)
+    if ativ == '9':
+        pares = 0
+        lista = []
+        while not pares == 6:
+            num = int(input('Digite um número par: '))
+            if num % 2 == 0:
+                lista.insert(0, num)
+                pares += 1
+        print(lista)
+    
+    if ativ == '10':
+        nota = []
+        soma = 0
+        for a in range(0,15):
+            nota.append(int(input('Digite sua nota: ')))
+            soma += nota[a]
+        print(nota)
+        print('A média da turma é:', soma/15)
+    
+    if ativ == '11':
+        lista = []
+        somapos = 0
+        qnegativos = 0
+        for a in range(0,10):
+            lista.append(float(input('Digite um número: ')))
+            if lista[a] > 0:
+                somapos += lista[a]
             else:
-                bonus47 = "15%"
-                bonusdin47 = compras47 * (15/100)
-            print(f"Olá {nome47}, seu bônus é de {bonus47}, totalizando R${bonusdin47:.2f}")
-            print("======================================")
-        print("======================================")
+                qnegativos += 1
+            
+        print(lista)
+        print('A soma dos positivos é:',somapos)
+        print('A quantidade de negativos é:',qnegativos)
+    
+    if ativ == '12':
+        lista = []
+        menor = 99999999999999999999999999999999999999999999
+        maior = -9999999999999999999999999999999999999999999
+        for a in range(0,5):
+            lista.append(int(input('Digite um número: ')))
+            if lista[a] > maior:
+                maior = lista[a]
+            if lista[a] < menor:
+                menor = lista[a]
+        print(lista)
+        print('O maior número é:',maior)
+        print('O menor número é:',menor)
+    
+    if ativ == '13':
+        lista = []
+        menor = 99999999999999999999999999999999999999999999
+        maior = -9999999999999999999999999999999999999999999
+        posmenor = -1
+        posmaior = -1
+        for a in range(0,5):
+            lista.append(int(input('Digite um número: ')))
+            if lista[a] > maior:
+                maior = lista[a]
+                posmaior = a
+            if lista[a] < menor:
+                menor = lista[a]
+                posmenor = a
 
+        print(lista)
+        print('O maior número está na posição:',posmaior)
+        print('O menor número está na posição:',posmenor)
+    
+    if ativ == '14':
+        lista = []
+        iguais = []
+        for a in range(0,10):
+            lista.append(int(input('Digite um número: ')))
+        for b in range(0,10):
+            for c in range(b+1,10):
+                if lista[b] == lista[c] and lista[b] not in iguais:
+                    iguais.append(lista[b])         
+        print(lista)
+        print(iguais)
 
+    if ativ == '15':
+        lista = []
+        iguaispos = []
+        for a in range(0,20):
+            lista.append(int(input('Digite um número: ')))
+        for a in range(0,20):
+            #falta remover os elementos repetidos
+            pass
