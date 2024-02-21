@@ -29,14 +29,6 @@ def espaço():
         print()
         print()
         print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
 
 
 import random
