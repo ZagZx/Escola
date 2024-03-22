@@ -26,4 +26,31 @@ def q1():
     print(f'Valor total do estoque: R${str(soma)}')
     print('========================================================')
 def q2():
-    
+    feijoes = {
+        'feijoada': 0.0,
+        'verde': 0.0
+    }
+    while True:
+        venda = int(input('''
+Digite 1 para registrar a venda de um prato de Feijoada 
+Digite 2 para registrar a venda de um prato de Feijão Verde
+
+Registrar: '''))
+        if venda > 2 or venda < 1:
+            break
+        else:
+            if venda == 1:
+                feijoes['feijoada'] += 0.2
+                
+                
+            elif venda ==2:
+                feijoes['verde'] += 0.2
+            print(f'''
+    *********** Consumo de Feijão na Cantina ***********
+    Foram consumidos até o momento aproximadamente: 
+    * {round(feijoes["feijoada"],2)} quilos de Feijoada
+    * {round(feijoes["verde"],2)} quilos de Feijão Verde 
+    ****************************************************''')
+        
+def q3():
+    pass
