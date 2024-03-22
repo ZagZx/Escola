@@ -31,19 +31,19 @@ def q2():
         'verde': 0.0
     }
     while True:
-        venda = int(input('''
+        venda = input('''
 Digite 1 para registrar a venda de um prato de Feijoada 
 Digite 2 para registrar a venda de um prato de Feijão Verde
 
-Registrar: '''))
-        if venda > 2 or venda < 1:
+Registrar: ''')
+        if venda != '1' or venda !='2':
             break
         else:
-            if venda == 1:
+            if venda == '1':
                 feijoes['feijoada'] += 0.2
                 
                 
-            elif venda ==2:
+            elif venda =='2':
                 feijoes['verde'] += 0.2
             print(f'''
     *********** Consumo de Feijão na Cantina ***********
